@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Hamburger Button (Mobile Only) -->
+        <button id="menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="brand" onclick="navigateToHome()" style="cursor: pointer;">
+                <div class="brand-icon">Moo</div>
+                <span class="brand-name">무보수근로</span>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-item active" data-target="home">
+                    <span class="icon">🏠</span>
+                    <span class="label">홈</span>
+                </button>
+                <button class="nav-item" data-target="tools">
+                    <span class="icon">⚡</span>
+                    <span class="label">자동화 도구</span>
+                </button>
+                <button class="nav-item" data-target="feedback">
+                    <span class="icon">💬</span>
+                    <span class="label">피드백 허브</span>
+                </button>
+                <button class="nav-item" data-target="journal">
+                    <span class="icon">✍️</span>
+                    <span class="label">개발 일지</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span class="status-dot"></span>
+                <span class="status-text">v2.4 작업 중</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+
+            <!-- View: Home -->
+            <section id="home-view" class="view active fade-in">
+                <div class="home-hero">
+                    <h1 class="hero-title">무보수근로's<br>업무 자동화 프로그램</h1>
+                    <p class="hero-subtitle">중요한 일에만 집중하세요.<br>나머지는 프로그램이 처리합니다.</p>
+                    <button class="cta-button" onclick="navigateToTools()">
+                        자동화 툴 다운로드
+                    </button>
+                </div>
+
+                <div class="home-content-scroll">
+                    <div class="home-section">
+                        <h2>About Developer (무보수근로)</h2>
+                        <div class="about-container">
+                            <p>
+                                인천에서 근무하는 초등교사입니다.<br>
+                                귀찮은 일을 쉽게 처리하는 소프트웨어를 만듭니다.<br>
+                                선생님들이 조금 더 편리하게 일할 수 있도록 노력합니다.
+                            </p>
+                            <div class="profile-mini"></div>
+                        </div>
+                    </div>
+
+                    <div class="home-section">
+                        <h2>Latest Releases</h2>
+                        <!-- Dynamic Container -->
+                        <div id="latest-release-container" style="display: grid; gap: 20px;">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- View: Tools (Master-Detail) -->
+            <section id="tools-view" class="view">
+                <div class="master-detail-container">
+                    <!-- Master List -->
+                    <div class="tool-list">
+                        <!-- Injected by JS -->
+                    </div>
+                    <!-- Detail Pane -->
+                    <div class="tool-detail">
+                        <!-- Injected by JS -->
+                        <div class="empty-state">도구를 선택하여 상세 정보를 확인하세요.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="feedback-view" class="view">
+                <div class="feedback-header">
+                    <h2>피드백 허브</h2>
+                    <p>1. 어떤 일을 반복하시나요? <br>2. 무슨 프로그램이 있으면 좋을까요?</p>
+                </div>
+
+                <!-- Padlet Container -->
+                <div class="padlet-container">
+                    <iframe src="https://padlet.com/1130lwh/padlet-ucld74n8y04dzfv7" frameborder="0"
+                        allow="camera;microphone;geolocation"></iframe>
+                </div>
+            </section>
+
+            <!-- View: Journal (Micro-blog) -->
+            <section id="journal-view" class="view">
+                <h2 class="section-title">개발 일지</h2>
+                <div class="journal-feed" id="journal-feed">
+                    <!-- Injected by JS -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
