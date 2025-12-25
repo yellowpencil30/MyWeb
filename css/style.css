@@ -871,3 +871,18 @@ button {
     min-height: 44px;
     min-width: 44px;
 }
+
+/* Usage Section */
+.usage-section {
+    margin-bottom: 40px;
+    padding: 24px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.usage-content {
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-size: 15px;
+}

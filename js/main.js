@@ -10,52 +10,29 @@ const GITHUB_REPO = 'antigravity-demo'; // sample
  */
 const toolsData = [
     {
-        id: 'autorefactor',
-        name: 'AutoRefactor',
-        icon: '⚡',
-        shortDesc: '레거시 코드 자동 정리 도구',
-        fullDesc: '복잡한 스파게티 코드를 분석하여 최신 ES6+ 문법으로 자동 변환합니다. AI 기반으로 변수명 난독화를 해제하고 미사용 코드를 안전하게 제거하여 코드 품질을 즉각적으로 향상시킵니다.',
-        downloadUrl: 'https://drive.google.com/uc?id=EXAMPLE_ID_1',
+        id: 'curriculum-uploader',
+        name: '주간학습안내 자동 업로더',
+        icon: '📤',
+        shortDesc: '다음주 주간학습안내 자동 업로드',
+        fullDesc: '선생님은 다음주 주간학습안내 파일만 준비하세요. 프로그램이 학교 홈페이지 로그인부터 게시판 선택, 글쓰기, 파일 첨부까지 모든 과정을 자동으로 수행합니다. 더 이상 반복적인 업로드 작업에 시간을 뺏기지 마세요.<br>(현재는 인천시 동부교육청 초등학교를 대상으로 합니다.)',
+        downloadUrl: 'https://drive.google.com/file/d/1_ZEWk9cJe6ZhDpCQJv7tbUoHwAmYVffC/view?usp=drive_link',
         /* [TIP] 새 버전을 추가하려면 아래 { } 블록을 복사해서 리스트 맨 위에 붙여넣으세요. */
+        usage: '1. 학교 홈페이지 계정 정보를 입력합니다.(아이디 로그인만 지원합니다.)<br>2. 업로드할 다음주 주간학습안내 파일(hwp)을 선택합니다.<br>3. "업로드 시작" 버튼을 클릭합니다.<br>4. 프로그램이 자동으로 접속하여 게시글을 등록합니다.',
         history: [
             // { ver: '2.5.0', date: '2025.01.01', note: '새로운 기능 설명...' },
-            { ver: '2.4.0', date: '2024.12.24', note: 'TypeScript 제네릭 추론 엔진 업그레이드' },
-            { ver: '2.3.0', date: '2024.11.15', note: 'AI 변수명 추천 정확도 98% 달성' },
-            { ver: '2.0.0', date: '2024.10.01', note: '처리 속도 300% 향상 (Rust 포팅)' }
+            { ver: '1.0.0', date: '2025.12.25', note: '제발 작동해라, 얍!' }
         ]
     },
     {
-        id: 'pixelperfect',
-        name: 'PixelPerfect',
-        icon: '🎨',
-        shortDesc: '디자인-코드 변환기',
-        fullDesc: 'Figma 디자인을 사용자의 CSS 디자인 시스템(Token)에 맞춰 완벽한 코드로 변환합니다. Tailwind 유틸리티 클래스와 Vanilla CSS 변수 모드를 모두 지원합니다.',
+        id: 'weekly-scheduler',
+        name: 'NEIS 주간학습안내 자동화',
+        icon: '📅',
+        shortDesc: 'PDF 분석 및 나이스(NEIS) 자동 입력 도구',
+        fullDesc: '나이스 주간학습안내 입력을 AI로 자동화하세요. PDF 파일만 업로드하면 Gemini가 시간표를 추출하여, 로그인부터 입력, 저장까지의 전 과정을 스스로 수행합니다.',
         downloadUrl: 'https://drive.google.com/uc?id=EXAMPLE_ID_2',
+        usage: '1. 본인의 나이스 계정 정보를 입력합니다.<br>2. 학기, 과목, 학년 관련 정보를 입력합니다.<br>3. 주간학습안내 파일을 찾습니다. (PDF만 지원)<br>4. "업로드 시작" 버튼을 클릭합니다.<br>5. 프로그램이 나이스에 접속하여 주간학습안내를 자동으로 입력합니다.',
         history: [
-            { ver: '1.2.0', date: '2024.12.10', note: 'Grid/Flex 레이아웃 자동 감지 알고리즘 추가' },
-            { ver: '1.0.0', date: '2024.11.20', note: '초기 릴리즈: Figma Plugin 연동' }
-        ]
-    },
-    {
-        id: 'db-visualizer',
-        name: 'DB Visualizer',
-        icon: '📊',
-        shortDesc: '실시간 데이터베이스 시각화',
-        fullDesc: '복잡한 SQL 쿼리 실행 결과를 실시간 인터랙티브 그래프로 시각화합니다. 데이터 간의 관계를 직관적으로 파악하고 병목 구간을 시각적으로 탐지할 수 있습니다.',
-        downloadUrl: 'https://drive.google.com/uc?id=EXAMPLE_ID_3',
-        history: [
-            { ver: '0.9.0', date: '2024.12.29', note: '오픈 베타 테스트 시작 (속도 최적화)' }
-        ]
-    },
-    {
-        id: 'doc-gen-ai',
-        name: 'DocGen AI',
-        icon: '📝',
-        shortDesc: '자동 문서화 에이전트',
-        fullDesc: '소스 코드를 읽고 개발자 친화적인 API 문서와 README를 자동으로 생성합니다. 변경 사항을 감지하여 문서를 항상 최신 상태로 유지합니다.',
-        downloadUrl: 'https://drive.google.com/uc?id=EXAMPLE_ID_4',
-        history: [
-            { ver: '0.5.0', date: '2025.01.01', note: '알파 테스트 예정' }
+            { ver: '0.0.0', date: '2025.12.25', note: '준비중(가까운 지인에게 테스트를 부탁했습니다.)' },
         ]
     }
 ];
@@ -221,6 +198,13 @@ window.selectTool = function (id) {
             </div>
         </div>
         
+        <h3>사용 방법</h3>
+        <div class="usage-section fade-in">
+            <div class="usage-content">
+                ${tool.usage || '사용 방법이 등록되지 않았습니다.'}
+            </div>
+        </div>
+
         <h3>업데이트 내역</h3>
         <div class="version-timeline fade-in">
             ${timelineHtml}
